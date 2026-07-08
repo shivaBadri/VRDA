@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <defs>
+    <clipPath id="c"><circle cx="32" cy="32" r="31"/></clipPath>
+  </defs>
+  <g clip-path="url(#c)">
+    <rect x="0" y="0" width="64" height="34" fill="#0A1E3F"/>
+    <rect x="0" y="34" width="64" height="30" fill="#35B0E8"/>
+  </g>
+  <circle cx="32" cy="32" r="31" fill="none" stroke="#0A1E3F" stroke-width="2"/>
+  <text x="32" y="28" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="800" fill="#FFFFFF">VR</text>
+  <text x="32" y="48" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" font-weight="700" letter-spacing="1" fill="#0A1E3F">PRIME</text>
+</svg>
