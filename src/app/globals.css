@@ -1,0 +1,353 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    color-scheme: light;
+    --font-inter: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    --font-jakarta: "Plus Jakarta Sans", var(--font-inter);
+    --header-h: 112px; /* top bar + main bar, used for scroll offset */
+  }
+
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: var(--header-h);
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    @apply bg-white font-sans text-ink antialiased;
+    overflow-x: clip;
+  }
+
+  ::selection {
+    @apply bg-gold-500/30 text-navy-950;
+  }
+}
+
+@layer components {
+  .container-x {
+    @apply mx-auto w-full max-w-7xl px-5 sm:px-8;
+  }
+
+  .gold-rule {
+    @apply block h-1 w-14 rounded-full bg-gold-500;
+  }
+
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-md px-5 py-3 text-sm font-semibold transition-all duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2;
+  }
+
+  .btn-gold {
+    @apply bg-gold-500 text-navy-950 hover:bg-gold-600 hover:shadow-[0_10px_24px_-8px_rgba(233,164,19,0.6)] focus-visible:outline-gold-500;
+  }
+
+  .btn-navy {
+    @apply bg-navy-900 text-white hover:bg-navy-800 hover:shadow-[0_10px_24px_-10px_rgba(10,30,63,0.7)] focus-visible:outline-navy-900;
+  }
+
+  .btn-outline {
+    @apply border border-white/40 text-white hover:bg-white/10 focus-visible:outline-white;
+  }
+
+  .card {
+    @apply rounded-xl border border-line bg-white p-6 shadow-[0_1px_2px_rgba(16,24,40,0.04)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_18px_40px_-16px_rgba(10,30,63,0.28)];
+  }
+
+  /* Subtle connectivity dot-grid used behind dark sections */
+  .hero-grid {
+    background-image: radial-gradient(circle at 1px 1px, rgba(255, 255, 255, 0.12) 1px, transparent 0);
+    background-size: 22px 22px;
+  }
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   MOTION SYSTEM
+   Reveal effects apply only when JS is present (html.js) AND the
+   visitor has not requested reduced motion. Without JS or with
+   reduced motion, content is fully visible and static — SEO,
+   no-JS and accessibility are never compromised.
+   ═══════════════════════════════════════════════════════════════ */
+
+@media (prefers-reduced-motion: no-preference) {
+  html.js [data-reveal] {
+    opacity: 0;
+    transform: translateY(18px);
+    transition:
+      opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1),
+      transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+    transition-delay: var(--reveal-delay, 0ms);
+    will-change: opacity, transform;
+  }
+  html.js [data-reveal="left"] { transform: translateX(-24px); }
+  html.js [data-reveal="right"] { transform: translateX(24px); }
+  html.js [data-reveal="scale"] { transform: scale(0.94); }
+  html.js [data-reveal].is-visible {
+    opacity: 1;
+    transform: none;
+  }
+
+  html.js [data-img-reveal] {
+    clip-path: inset(0 0 100% 0);
+    transition: clip-path 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+    transition-delay: var(--reveal-delay, 0ms);
+  }
+  html.js [data-img-reveal].is-visible {
+    clip-path: inset(0 0 0 0);
+  }
+
+  .animate-float { animation: float 6s ease-in-out infinite; }
+  .animate-float-slow { animation: float 9s ease-in-out infinite; }
+  .animate-drift { animation: drift 18s ease-in-out infinite; }
+  .animate-spin-slow { animation: spinSlow 60s linear infinite; }
+
+  /* Subtle Ken Burns for section photographs (never applied to the
+     priority hero image, which must stay a stable LCP element). */
+  .animate-kenburns {
+    transform-origin: center;
+    animation: kenburns 20s ease-in-out infinite alternate;
+    will-change: transform;
+  }
+
+  .route-line {
+    stroke-dasharray: 5 8;
+    animation: flow 2.4s linear infinite;
+  }
+  .node-pulse {
+    transform-box: fill-box;
+    transform-origin: center;
+    animation: nodePulse 2.6s ease-in-out infinite;
+  }
+  .packet { offset-rotate: 0deg; animation: packet 5s linear infinite; }
+}
+
+.particle {
+  position: absolute;
+  border-radius: 9999px;
+  animation: floatParticle var(--pDur, 14s) ease-in-out infinite;
+  animation-delay: var(--pDelay, 0s);
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-12px); }
+}
+@keyframes drift {
+  0%, 100% { transform: translate(0, 0); }
+  50% { transform: translate(14px, -10px); }
+}
+@keyframes spinSlow {
+  to { transform: rotate(360deg); }
+}
+@keyframes flow {
+  to { stroke-dashoffset: -26; }
+}
+@keyframes nodePulse {
+  0%, 100% { transform: scale(1); opacity: 0.9; }
+  50% { transform: scale(1.35); opacity: 0.5; }
+}
+@keyframes packet {
+  0% { offset-distance: 0%; opacity: 0; }
+  8% { opacity: 1; }
+  92% { opacity: 1; }
+  100% { offset-distance: 100%; opacity: 0; }
+}
+@keyframes floatParticle {
+  0%, 100% { transform: translateY(0) translateX(0); opacity: 0.35; }
+  50% { transform: translateY(-26px) translateX(10px); opacity: 0.8; }
+}
+@keyframes kenburns {
+  0% { transform: scale(1.02) translate(0, 0); }
+  100% { transform: scale(1.12) translate(-1.5%, -1.5%); }
+}
+
+/* ── Reduced motion: neutralise everything, keep content visible ── */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-delay: 0ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    transition-delay: 0ms !important;
+  }
+  .particle { display: none; }
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   FLOATING WHATSAPP BUTTON
+   Position (right/bottom) is set inline by the component so it can be
+   anchored to the content grid; everything visual lives here.
+   ═══════════════════════════════════════════════════════════════ */
+
+.floating-whatsapp {
+  position: fixed;
+  z-index: 55;
+  display: inline-flex;
+  align-items: center;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.5s ease, transform 0.5s ease, visibility 0.3s ease;
+  text-decoration: none;
+}
+.floating-whatsapp.is-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.fw-btn {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 60px;
+  width: 60px;
+  border-radius: 9999px;
+  background: #25d366;
+  border: 3px solid #ffffff;
+  box-shadow: 0 12px 30px -6px rgba(37, 211, 102, 0.5), 0 4px 12px rgba(16, 24, 40, 0.18);
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.25s ease;
+}
+.floating-whatsapp.is-desktop .fw-btn {
+  height: 64px;
+  width: 64px;
+}
+.fw-btn svg {
+  height: 30px;
+  width: 30px;
+  fill: #ffffff;
+}
+.floating-whatsapp.is-desktop .fw-btn svg {
+  height: 32px;
+  width: 32px;
+}
+
+.floating-whatsapp:hover .fw-btn {
+  transform: scale(1.1);
+  box-shadow: 0 16px 40px -6px rgba(37, 211, 102, 0.62), 0 6px 16px rgba(16, 24, 40, 0.24);
+}
+.floating-whatsapp:focus-visible {
+  outline: none;
+}
+.floating-whatsapp:focus-visible .fw-btn {
+  outline: 3px solid #25d366;
+  outline-offset: 3px;
+}
+
+/* Gentle pulse ring roughly every 5 seconds */
+.fw-btn::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 9999px;
+  background: #25d366;
+  z-index: -1;
+  animation: fwPulse 5s ease-out infinite;
+}
+@keyframes fwPulse {
+  0% { transform: scale(1); opacity: 0.5; }
+  14% { transform: scale(1.65); opacity: 0; }
+  100% { transform: scale(1.65); opacity: 0; }
+}
+
+/* Desktop tooltip */
+.fw-tooltip {
+  position: relative;
+  margin-right: 12px;
+  white-space: nowrap;
+  background: #0a1e3f;
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 600;
+  padding: 8px 12px;
+  border-radius: 8px;
+  box-shadow: 0 10px 24px rgba(10, 30, 63, 0.28);
+  opacity: 0;
+  transform: translateX(6px);
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  pointer-events: none;
+}
+.fw-tooltip::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: -5px;
+  transform: translateY(-50%);
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  border-left: 5px solid #0a1e3f;
+}
+.floating-whatsapp.is-desktop:hover .fw-tooltip {
+  opacity: 1;
+  transform: translateX(0);
+}
+.floating-whatsapp:not(.is-desktop) .fw-tooltip {
+  display: none;
+}
+
+/* Hide while the mobile navigation drawer is open */
+body.drawer-open .floating-whatsapp {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .fw-btn::before { animation: none; opacity: 0; }
+  .floating-whatsapp { transform: none; transition: opacity 0.2s ease; }
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   LENIS SMOOTH SCROLL (recommended base styles)
+   ═══════════════════════════════════════════════════════════════ */
+html.lenis,
+html.lenis body { height: auto; }
+.lenis.lenis-smooth { scroll-behavior: auto !important; }
+.lenis.lenis-smooth [data-lenis-prevent] { overscroll-behavior: contain; }
+.lenis.lenis-stopped { overflow: hidden; }
+.lenis.lenis-scrolling iframe { pointer-events: none; }
+
+/* ═══════════════════════════════════════════════════════════════
+   BACK-TO-TOP BUTTON  (bottom-left, clear of the WhatsApp button)
+   ═══════════════════════════════════════════════════════════════ */
+.back-to-top {
+  position: fixed;
+  left: 24px;
+  bottom: 32px;
+  z-index: 55;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 46px;
+  width: 46px;
+  border-radius: 9999px;
+  background: #0a1e3f;
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  box-shadow: 0 10px 26px -8px rgba(10, 30, 63, 0.5);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: opacity 0.35s ease, transform 0.35s ease, visibility 0.35s ease, background 0.2s ease;
+  cursor: pointer;
+}
+.back-to-top.is-visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+.back-to-top:hover {
+  background: #12294f;
+  transform: translateY(-2px);
+}
+.back-to-top:focus-visible {
+  outline: 3px solid #e9a413;
+  outline-offset: 3px;
+}
+@media (max-width: 640px) {
+  .back-to-top { left: 20px; bottom: 20px; height: 42px; width: 42px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .back-to-top { transition: opacity 0.2s ease; transform: none; }
+}
