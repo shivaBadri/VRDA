@@ -1,5 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
   <defs>
+<<<<<<< HEAD
     <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
       <stop offset="0" stop-color="#1B3A6B"/>
       <stop offset="1" stop-color="#081733"/>
@@ -21,4 +22,15 @@
     <circle cx="52" cy="24" r="3.2" fill="#E9A413"/>
   </g>
   <circle cx="32" cy="32" r="28" fill="none" stroke="#E9A413" stroke-width="2.2"/>
+=======
+    <clipPath id="c"><circle cx="32" cy="32" r="31"/></clipPath>
+  </defs>
+  <g clip-path="url(#c)">
+    <rect x="0" y="0" width="64" height="34" fill="#0A1E3F"/>
+    <rect x="0" y="34" width="64" height="30" fill="#35B0E8"/>
+  </g>
+  <circle cx="32" cy="32" r="31" fill="none" stroke="#0A1E3F" stroke-width="2"/>
+  <text x="32" y="28" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="800" fill="#FFFFFF">VR</text>
+  <text x="32" y="48" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" font-weight="700" letter-spacing="1" fill="#0A1E3F">PRIME</text>
+>>>>>>> 0f6eb8cae909159f643d2de53878a1e9a820a49d
 </svg>

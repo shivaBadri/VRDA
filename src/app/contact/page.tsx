@@ -20,7 +20,11 @@ export default function ContactPage() {
         <Container className="py-16 sm:py-20">
           <div className="grid grid-cols-1 gap-10 lg:grid-cols-2">
             {/* Info */}
+<<<<<<< HEAD
             <div data-reveal>
+=======
+            <div>
+>>>>>>> 0f6eb8cae909159f643d2de53878a1e9a820a49d
               <p className="text-xs font-semibold uppercase tracking-[0.18em] text-gold-600">Get in Touch</p>
               <h2 className="mt-3 font-display text-3xl font-extrabold tracking-tight text-navy-900 sm:text-4xl">
                 We are here to help your business
@@ -68,7 +72,11 @@ export default function ContactPage() {
             </div>
 
             {/* Form */}
+<<<<<<< HEAD
             <div data-reveal="right">
+=======
+            <div>
+>>>>>>> 0f6eb8cae909159f643d2de53878a1e9a820a49d
               <ContactForm />
             </div>
           </div>

@@ -7,18 +7,27 @@
     color-scheme: light;
     --font-inter: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
     --font-jakarta: "Plus Jakarta Sans", var(--font-inter);
+<<<<<<< HEAD
     --header-h: 112px; /* top bar + main bar, used for scroll offset */
+=======
+>>>>>>> 0f6eb8cae909159f643d2de53878a1e9a820a49d
   }
 
   html {
     scroll-behavior: smooth;
+<<<<<<< HEAD
     scroll-padding-top: var(--header-h);
+=======
+>>>>>>> 0f6eb8cae909159f643d2de53878a1e9a820a49d
     -webkit-text-size-adjust: 100%;
   }
 
   body {
     @apply bg-white font-sans text-ink antialiased;
+<<<<<<< HEAD
     overflow-x: clip;
+=======
+>>>>>>> 0f6eb8cae909159f643d2de53878a1e9a820a49d
   }
 
   ::selection {
@@ -36,6 +45,7 @@
   }
 
   .btn {
+<<<<<<< HEAD
     @apply inline-flex items-center justify-center gap-2 rounded-md px-5 py-3 text-sm font-semibold transition-all duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2;
   }
 
@@ -45,6 +55,17 @@
 
   .btn-navy {
     @apply bg-navy-900 text-white hover:bg-navy-800 hover:shadow-[0_10px_24px_-10px_rgba(10,30,63,0.7)] focus-visible:outline-navy-900;
+=======
+    @apply inline-flex items-center justify-center gap-2 rounded-md px-5 py-3 text-sm font-semibold transition-colors duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2;
+  }
+
+  .btn-gold {
+    @apply bg-gold-500 text-navy-950 hover:bg-gold-600 focus-visible:outline-gold-500;
+  }
+
+  .btn-navy {
+    @apply bg-navy-900 text-white hover:bg-navy-800 focus-visible:outline-navy-900;
+>>>>>>> 0f6eb8cae909159f643d2de53878a1e9a820a49d
   }
 
   .btn-outline {
@@ -52,7 +73,11 @@
   }
 
   .card {
+<<<<<<< HEAD
     @apply rounded-xl border border-line bg-white p-6 shadow-[0_1px_2px_rgba(16,24,40,0.04)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_18px_40px_-16px_rgba(10,30,63,0.28)];
+=======
+    @apply rounded-xl border border-line bg-white p-6 shadow-[0_1px_2px_rgba(16,24,40,0.04)] transition-all duration-200 hover:-translate-y-0.5 hover:shadow-[0_12px_28px_-12px_rgba(10,30,63,0.25)];
+>>>>>>> 0f6eb8cae909159f643d2de53878a1e9a820a49d
   }
 
   /* Subtle connectivity dot-grid used behind dark sections */
@@ -62,6 +87,7 @@
   }
 }
 
+<<<<<<< HEAD
 /* ═══════════════════════════════════════════════════════════════
    MOTION SYSTEM
    Reveal effects apply only when JS is present (html.js) AND the
@@ -350,4 +376,18 @@ html.lenis body { height: auto; }
 }
 @media (prefers-reduced-motion: reduce) {
   .back-to-top { transition: opacity 0.2s ease; transform: none; }
+=======
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+>>>>>>> 0f6eb8cae909159f643d2de53878a1e9a820a49d
 }

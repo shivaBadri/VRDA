@@ -1,6 +1,10 @@
 import Link from "next/link";
 import { Phone, Mail, MapPin, Clock } from "lucide-react";
+<<<<<<< HEAD
 import { site, nav, services, benefits, credentials } from "@/lib/content";
+=======
+import { site, nav, services, benefits } from "@/lib/content";
+>>>>>>> 0f6eb8cae909159f643d2de53878a1e9a820a49d
 import { Container, Icon, Logo, SocialLinks } from "@/components/ui";
 
 export default function Footer() {
@@ -26,6 +30,7 @@ export default function Footer() {
         <div>
           <Logo tone="light" />
           <p className="mt-4 max-w-xs text-sm leading-relaxed text-white/70">{site.intro}</p>
+<<<<<<< HEAD
           <ul className="mt-4 flex flex-wrap gap-2" aria-label="Certifications">
             {credentials.map((c) => (
               <li key={c.label} className="rounded-full border border-white/10 bg-white/[0.06] px-2.5 py-1 text-[11px] font-semibold text-white/80">
@@ -33,6 +38,8 @@ export default function Footer() {
               </li>
             ))}
           </ul>
+=======
+>>>>>>> 0f6eb8cae909159f643d2de53878a1e9a820a49d
           <SocialLinks socials={site.socials} className="mt-5" />
         </div>
 

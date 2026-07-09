@@ -60,6 +60,7 @@ export default function ContactForm() {
       errors[field] ? "border-red-400" : "border-line focus:border-gold-500"
     }`;
 
+<<<<<<< HEAD
   // Accessibility props linking each control to its inline error message.
   const aria = (field: Field) => ({
     "aria-invalid": errors[field] ? true : undefined,
@@ -73,6 +74,11 @@ export default function ContactForm() {
         aria-live="polite"
         className="flex flex-col items-center justify-center rounded-xl border border-line bg-white p-10 text-center"
       >
+=======
+  if (status === "success") {
+    return (
+      <div className="flex flex-col items-center justify-center rounded-xl border border-line bg-white p-10 text-center">
+>>>>>>> 0f6eb8cae909159f643d2de53878a1e9a820a49d
         <CheckCircle2 className="h-12 w-12 text-green-600" aria-hidden="true" />
         <h3 className="mt-4 font-display text-xl font-bold text-navy-900">Message sent</h3>
         <p className="mt-2 max-w-sm text-sm text-steel">
@@ -102,7 +108,10 @@ export default function ContactForm() {
             value={data.name}
             onChange={(e) => update("name", e.target.value)}
             className={fieldClass("name")}
+<<<<<<< HEAD
             {...aria("name")}
+=======
+>>>>>>> 0f6eb8cae909159f643d2de53878a1e9a820a49d
             placeholder="John Doe"
             autoComplete="name"
           />
@@ -116,7 +125,10 @@ export default function ContactForm() {
               value={data.email}
               onChange={(e) => update("email", e.target.value)}
               className={fieldClass("email")}
+<<<<<<< HEAD
             {...aria("email")}
+=======
+>>>>>>> 0f6eb8cae909159f643d2de53878a1e9a820a49d
               placeholder="you@company.com"
               autoComplete="email"
             />
@@ -128,7 +140,10 @@ export default function ContactForm() {
               value={data.phone}
               onChange={(e) => update("phone", e.target.value)}
               className={fieldClass("phone")}
+<<<<<<< HEAD
             {...aria("phone")}
+=======
+>>>>>>> 0f6eb8cae909159f643d2de53878a1e9a820a49d
               placeholder="+91 00000 00000"
               autoComplete="tel"
             />
@@ -142,7 +157,10 @@ export default function ContactForm() {
             value={data.subject}
             onChange={(e) => update("subject", e.target.value)}
             className={fieldClass("subject")}
+<<<<<<< HEAD
             {...aria("subject")}
+=======
+>>>>>>> 0f6eb8cae909159f643d2de53878a1e9a820a49d
             placeholder="How can we help?"
           />
         </Field>
@@ -154,14 +172,21 @@ export default function ContactForm() {
             value={data.message}
             onChange={(e) => update("message", e.target.value)}
             className={`${fieldClass("message")} resize-y`}
+<<<<<<< HEAD
             {...aria("message")}
+=======
+>>>>>>> 0f6eb8cae909159f643d2de53878a1e9a820a49d
             placeholder="Tell us about your requirement..."
           />
         </Field>
       </div>
 
       {status === "error" ? (
+<<<<<<< HEAD
         <div role="alert" className="mt-4 flex items-start gap-2 rounded-md bg-red-50 p-3 text-sm text-red-700">
+=======
+        <div className="mt-4 flex items-start gap-2 rounded-md bg-red-50 p-3 text-sm text-red-700">
+>>>>>>> 0f6eb8cae909159f643d2de53878a1e9a820a49d
           <AlertCircle className="mt-0.5 h-4 w-4 shrink-0" aria-hidden="true" />
           <span>Something went wrong sending your message. Please try again, or email us directly.</span>
         </div>
@@ -204,11 +229,15 @@ function Field({
         {optional ? <span className="text-xs font-normal text-steel">(optional)</span> : null}
       </label>
       {children}
+<<<<<<< HEAD
       {error ? (
         <p id={`${htmlFor}-error`} className="mt-1 text-xs text-red-600">
           {error}
         </p>
       ) : null}
+=======
+      {error ? <p className="mt-1 text-xs text-red-600">{error}</p> : null}
+>>>>>>> 0f6eb8cae909159f643d2de53878a1e9a820a49d
     </div>
   );
 }

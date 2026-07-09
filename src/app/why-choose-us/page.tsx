@@ -36,6 +36,7 @@ export default function WhyChooseUsPage() {
         </Container>
       </section>
 
+<<<<<<< HEAD
       <section className="relative overflow-hidden bg-gradient-to-br from-navy-800 via-navy-900 to-navy-950 text-white">
         <div className="hero-grid absolute inset-0 opacity-40" aria-hidden="true" />
         <Container className="relative py-16 sm:py-20">
@@ -48,6 +49,11 @@ export default function WhyChooseUsPage() {
           <div data-reveal className="mt-10">
             <StatBand stats={stats} variant="onDark" />
           </div>
+=======
+      <section className="bg-navy-900">
+        <Container className="py-14 sm:py-16">
+          <StatBand stats={stats} variant="onDark" />
+>>>>>>> 0f6eb8cae909159f643d2de53878a1e9a820a49d
         </Container>
       </section>
 
