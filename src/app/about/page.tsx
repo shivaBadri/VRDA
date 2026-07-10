@@ -1,26 +1,16 @@
 import type { Metadata } from "next";
-<<<<<<< HEAD
 import { Target, Eye, Check } from "lucide-react";
 import { about, stats, site, credentials, leadership } from "@/lib/content";
-=======
-import { Target, Eye } from "lucide-react";
-import { about, stats, site } from "@/lib/content";
->>>>>>> 0f6eb8cae909159f643d2de53878a1e9a820a49d
 import {
   Container,
   PageHeader,
   SectionHeading,
   StatBand,
   CTASection,
-<<<<<<< HEAD
   revealDelay,
 } from "@/components/ui";
 import { Media } from "@/components/Media";
 import { media } from "@/lib/media";
-=======
-  GlobeMark,
-} from "@/components/ui";
->>>>>>> 0f6eb8cae909159f643d2de53878a1e9a820a49d
 
 export const metadata: Metadata = {
   title: "About Us",
@@ -38,7 +28,6 @@ export default function AboutPage() {
           <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-2">
             <div>
               <SectionHeading eyebrow="Who We Are" title="Trade partners you can rely on" />
-<<<<<<< HEAD
               <p data-reveal className="mt-6 text-base leading-relaxed text-steel">{about.whoWeAre}</p>
               <div data-reveal className="mt-6 rounded-xl border border-line bg-mist-50 p-5">
                 <p className="text-sm leading-relaxed text-steel">{leadership.note}</p>
@@ -80,19 +69,6 @@ export default function AboutPage() {
                 <p className="mt-1.5 text-sm leading-relaxed text-white/70">{c.detail}</p>
               </div>
             ))}
-=======
-              <p className="mt-6 text-base leading-relaxed text-steel">{about.whoWeAre}</p>
-            </div>
-            <div className="relative flex items-center justify-center">
-              <div className="relative flex aspect-square w-full max-w-md items-center justify-center overflow-hidden rounded-2xl bg-gradient-to-br from-navy-800 to-navy-950">
-                <div className="hero-grid absolute inset-0 opacity-70" aria-hidden="true" />
-                <GlobeMark className="relative h-72 w-72 text-white/25" />
-                <div className="absolute bottom-6 left-6 right-6 rounded-xl border border-white/10 bg-white/[0.06] p-4 text-center backdrop-blur">
-                  <p className="font-display text-lg font-bold text-white">{site.tagline}</p>
-                </div>
-              </div>
-            </div>
->>>>>>> 0f6eb8cae909159f643d2de53878a1e9a820a49d
           </div>
         </Container>
       </section>
@@ -101,22 +77,14 @@ export default function AboutPage() {
       <section className="bg-mist-50">
         <Container className="py-16 sm:py-20">
           <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
-<<<<<<< HEAD
             <article data-reveal className="card">
-=======
-            <article className="card">
->>>>>>> 0f6eb8cae909159f643d2de53878a1e9a820a49d
               <span className="inline-flex h-12 w-12 items-center justify-center rounded-lg bg-navy-900 text-white">
                 <Target className="h-6 w-6" strokeWidth={1.75} aria-hidden="true" />
               </span>
               <h3 className="mt-5 font-display text-xl font-bold text-navy-900">Our Mission</h3>
               <p className="mt-3 text-sm leading-relaxed text-steel">{about.mission}</p>
             </article>
-<<<<<<< HEAD
             <article data-reveal style={revealDelay(1, 90)} className="card">
-=======
-            <article className="card">
->>>>>>> 0f6eb8cae909159f643d2de53878a1e9a820a49d
               <span className="inline-flex h-12 w-12 items-center justify-center rounded-lg bg-gold-500 text-navy-950">
                 <Eye className="h-6 w-6" strokeWidth={1.75} aria-hidden="true" />
               </span>
@@ -130,15 +98,7 @@ export default function AboutPage() {
       {/* Stats */}
       <section>
         <Container className="py-16 sm:py-20">
-<<<<<<< HEAD
           <SectionHeading eyebrow="Our Track Record" title="A decade of global trade" align="center" />
-=======
-          <SectionHeading
-            eyebrow="Our Track Record"
-            title="A decade of global trade"
-            align="center"
-          />
->>>>>>> 0f6eb8cae909159f643d2de53878a1e9a820a49d
           <div className="mt-12">
             <StatBand stats={stats} variant="card" />
           </div>

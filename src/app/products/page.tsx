@@ -1,15 +1,10 @@
 import type { Metadata } from "next";
-<<<<<<< HEAD
 import { Check } from "lucide-react";
 import { products } from "@/lib/content";
 import { Container, PageHeader, SectionHeading, ProductTile, CTASection } from "@/components/ui";
 import { Media } from "@/components/Media";
 import { media } from "@/lib/media";
 import ProductMarquee from "@/components/ProductMarquee";
-=======
-import { products } from "@/lib/content";
-import { Container, PageHeader, SectionHeading, ProductTile, CTASection } from "@/components/ui";
->>>>>>> 0f6eb8cae909159f643d2de53878a1e9a820a49d
 
 export const metadata: Metadata = {
   title: "Products & Industries",
@@ -22,14 +17,11 @@ export default function ProductsPage() {
     <>
       <PageHeader title="Products & Industries" crumb="Products" />
 
-<<<<<<< HEAD
       {/* Infinite image rows (alternating directions, pause on hover) */}
       <section className="overflow-hidden bg-mist-50 py-8 sm:py-10">
         <ProductMarquee />
       </section>
 
-=======
->>>>>>> 0f6eb8cae909159f643d2de53878a1e9a820a49d
       <section>
         <Container className="py-16 sm:py-20">
           <SectionHeading
@@ -39,28 +31,18 @@ export default function ProductsPage() {
             align="center"
           />
           <div className="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-<<<<<<< HEAD
             {products.map((product, i) => (
               <ProductTile key={product.title} product={product} index={i} />
             ))}
           </div>
 
           <p data-reveal className="mx-auto mt-10 max-w-2xl text-center text-sm text-steel">
-=======
-            {products.map((product) => (
-              <ProductTile key={product.title} product={product} />
-            ))}
-          </div>
-
-          <p className="mx-auto mt-10 max-w-2xl text-center text-sm text-steel">
->>>>>>> 0f6eb8cae909159f643d2de53878a1e9a820a49d
             Looking for something specific? We source a broad range of commodities and finished
             goods on request. Tell us your requirement and we&apos;ll find the right supplier.
           </p>
         </Container>
       </section>
 
-<<<<<<< HEAD
       {/* Quality & sourcing band */}
       <section className="bg-mist-50">
         <Container className="py-16 sm:py-20">
@@ -97,8 +79,6 @@ export default function ProductsPage() {
         </Container>
       </section>
 
-=======
->>>>>>> 0f6eb8cae909159f643d2de53878a1e9a820a49d
       <CTASection />
     </>
   );

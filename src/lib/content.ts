@@ -11,15 +11,9 @@ export type Benefit = { icon: string; text: string };
 export const site = {
   name: "VRDA Prime Overseas Pvt. Ltd.",
   shortName: "VRDA Prime",
-<<<<<<< HEAD
   tagline: "Trade Beyond Borders, Trust Beyond Limits.",
   intro:
     "We are a team dedicated to fostering a positive customer experience at every stage of the journey, creating synergies, promoting transparency, and enabling all stakeholders to achieve their goals.",
-=======
-  tagline: "Trade Beyond Borders, Beyond Limits.",
-  intro:
-    "We are a global trade and consulting company providing reliable export, import, sourcing, logistics and technology solutions worldwide.",
->>>>>>> 0f6eb8cae909159f643d2de53878a1e9a820a49d
   domain: "www.vrdaprime.com",
   phones: ["+91 78150 14122", "+91 93811 05814"],
   emails: ["info@vrdaprime.com", "support@vrdaprime.com"],
@@ -37,16 +31,10 @@ export const site = {
     line2: "Sunday: Closed",
   },
   socials: {
-<<<<<<< HEAD
     x: "https://x.com/vrdaprime",
     linkedin: "https://www.linkedin.com/in/vrda",
     instagram: "https://www.instagram.com/vrdaprime",
     whatsapp: "https://wa.me/+919347842550",
-=======
-    facebook: "https://www.facebook.com/",
-    linkedin: "https://www.linkedin.com/",
-    instagram: "https://www.instagram.com/",
->>>>>>> 0f6eb8cae909159f643d2de53878a1e9a820a49d
   },
 };
 
@@ -68,26 +56,16 @@ export const stats: Stat[] = [
 
 // Six headline services shown on the home page
 export const coreServices: Service[] = [
-<<<<<<< HEAD
   { icon: "handshake", title: "Merchant Exporting", description: "Procurement and sale of goods to international buyers with dependable logistics and compliance." },
   { icon: "truck", title: "Freight Forwarding", description: "Shipment coordination, documentation, customs support and border-ready transport planning." },
   { icon: "sourcing", title: "Product Sourcing", description: "Strategic sourcing of quality products from reliable suppliers at competitive prices." },
   { icon: "upload", title: "Export Services", description: "End-to-end export support with documentation and smooth handoffs across international markets." },
   { icon: "download", title: "Import Support", description: "Reliable import coordination, customs readiness and supplier follow-through." },
   { icon: "workflow", title: "Supply Chain Support", description: "Operational support that keeps your trade flow efficient, responsive and dependable." },
-=======
-  { icon: "upload", title: "Export Services", description: "Quality products delivered to global markets with full documentation." },
-  { icon: "download", title: "Import Services", description: "Reliable sourcing and timely, compliant import solutions." },
-  { icon: "sourcing", title: "Product Sourcing", description: "The right products from vetted manufacturers worldwide." },
-  { icon: "truck", title: "Freight & Logistics", description: "Air, sea and land movement, coordinated end to end." },
-  { icon: "briefcase", title: "Business Consulting", description: "Strategy and guidance to grow across borders." },
-  { icon: "monitor", title: "IT Solutions", description: "Modern technology to power your trade operations." },
->>>>>>> 0f6eb8cae909159f643d2de53878a1e9a820a49d
 ];
 
 // Full nine-service catalogue shown on the Services page
 export const services: Service[] = [
-<<<<<<< HEAD
   { icon: "handshake", title: "Merchant Exporting", description: "We procure and sell goods to international buyers while ensuring compliance, competitive pricing and smooth delivery." },
   { icon: "truck", title: "Freight Forwarding", description: "We coordinate shipment logistics, documentation, customs clearance and transportation across borders." },
   { icon: "sourcing", title: "Product Sourcing", description: "We source quality products from trusted suppliers at competitive prices to meet business needs." },
@@ -99,21 +77,6 @@ export const services: Service[] = [
 export const products: Product[] = [
   { title: "Diabetic Rice", blurb: "Low-glycemic index rice options designed for health-conscious consumers and specialty buyers.", icon: "rice", from: "#1B3A6B", to: "#0A1E3F" },
   { title: "Rice", blurb: "Premium and specialty rice varieties sourced for global buyers with consistent quality and documentation.", icon: "rice", from: "#1B3A6B", to: "#0A1E3F" },
-=======
-  { icon: "upload", title: "Export Services", description: "We help you export quality products globally with complete documentation and support." },
-  { icon: "download", title: "Import Services", description: "End-to-end import solutions with reliable sourcing and timely delivery." },
-  { icon: "handshake", title: "Merchant Exporting", description: "We act as your merchant exporter with a focus on quality and compliance." },
-  { icon: "sourcing", title: "Product Sourcing", description: "We source the best products from reliable manufacturers across the globe." },
-  { icon: "truck", title: "Freight & Logistics", description: "Efficient logistics solutions by air, sea and land for timely and safe delivery." },
-  { icon: "workflow", title: "Supply Chain Solutions", description: "Optimized supply chain solutions to improve efficiency and reduce costs." },
-  { icon: "consulting", title: "International Trade Consulting", description: "Expert advice and guidance to help you grow in global markets." },
-  { icon: "code", title: "Website Development", description: "Custom websites designed to elevate your business online." },
-  { icon: "briefcase", title: "Business Consulting", description: "Strategic solutions to help your business achieve sustainable growth." },
-];
-
-export const products: Product[] = [
-  { title: "Rice", blurb: "Premium and specialty rice, including low-GI diabetic-friendly varieties, sourced for global buyers.", icon: "rice", from: "#1B3A6B", to: "#0A1E3F" },
->>>>>>> 0f6eb8cae909159f643d2de53878a1e9a820a49d
   { title: "Spices", blurb: "Authentic Indian spices selected for aroma, purity and consistent export-grade quality.", icon: "spices", from: "#12294F", to: "#081733" },
   { title: "Agricultural Products", blurb: "A diverse portfolio of agri-commodities meeting varying international market demands.", icon: "agri", from: "#1E9AD6", to: "#12294F" },
   { title: "Essential Oils", blurb: "Natural essential oils and extracts supplied with documentation and compliance.", icon: "oils", from: "#1B3A6B", to: "#081733" },
@@ -165,7 +128,6 @@ export const benefits: Benefit[] = [
   { icon: "shield", text: "Quality, Trust & Timely Delivery \u2014 Our Commitment" },
   { icon: "globe", text: "Let\u2019s Grow Together, Beyond Borders" },
 ];
-<<<<<<< HEAD
 
 // ─────────────────────────────────────────────────────────────
 // Additional real, publicly-stated business information sourced
@@ -207,5 +169,3 @@ export const leadership = {
   note:
     "A professionally managed export company based in Hyderabad, India, working with partners across global markets for reliable product supply and sourcing.",
 };
-=======
->>>>>>> 0f6eb8cae909159f643d2de53878a1e9a820a49d
