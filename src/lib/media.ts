@@ -41,7 +41,7 @@ const aqua: [string, string] = ["#1E9AD6", "#0A1E3F"];
 
 export const media = {
   heroBackdrop: {
-    photo: "/images/cturv8vAsPXN8sBjpgRFPRIP04.png",
+    photo: "/images/cturv8vAsPXN8sBjpgRFPRIP04.jpeg",
     scene: "port",
     alt: "Aerial view of a container port with stacked shipping containers",
     tint: navy,
@@ -55,7 +55,7 @@ export const media = {
   },
 
   approach: {
-    photo: "/images/merchant exports.png",
+    photo: "/images/merchant exports.avif",
     scene: "warehouse",
     alt: "Warehouse operations with organised racking and storage",
     tint: navy,
@@ -76,7 +76,7 @@ export const media = {
   },
 
   contactBanner: {
-    photo: "/images/yIy6phoiIf84zwFx7NRHBVvztRo.png",
+    photo: "/images/yIy6phoiIf84zwFx7NRHBVvztRo.avif",
     scene: "airFreight",
     alt: "Air freight cargo aircraft being loaded for international shipment",
     tint: aqua,
@@ -98,8 +98,8 @@ export const productImages: Record<string, string> = {
   "Diabetic Rice": "/images/Diabetic Rice.png",
   Rice: "/images/rice.png",
   Spices: "/images/qwyQeyfBGJi9aww8ZkveTOM5ac.png",
-  "Agricultural Products": "/images/RCaxzJxVFjyHNi5dujROzvvcI0g.png",
-  "Essential Oils": "/images/essential oils.png",
-  "Medical Equipment": "/images/Medical Equipments.png",
-  "Textiles & Apparel": "/images/1Ar6vWvPCx1oFUSDbjqBbFe27I.png",
+  "Agricultural Products": "/images/RCaxzJxVFjyHNi5dujROzvvcI0g.webp",
+  "Essential Oils": "/images/essential oils.webp",
+  "Medical Equipment": "/images/Medical Equipments.webp",
+  "Textiles & Apparel": "/images/1Ar6vWvPCx1oFUSDbjqBbFe27I.webp",
 };
