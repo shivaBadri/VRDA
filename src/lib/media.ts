@@ -103,3 +103,12 @@ export const productImages: Record<string, string> = {
   "Medical Equipment": "/images/Medical Equipments.webp",
   "Textiles & Apparel": "/images/1Ar6vWvPCx1oFUSDbjqBbFe27I.webp",
 };
+
+export const SERVICE_IMAGES = {
+  merchantExporting: "/images/services/merchant exports.avif",
+  freightForwarding: "/images/services/yIy6phoiIf84zwFx7NRHBVvztRo.avif",
+  productSourcing: "/images/services/diverse product.avif",
+  exportServices: "/images/services/HB2BnmJIpqj1iYhAsMiXeKvrL9k.webp",
+  importSupport: "/images/services/Import.webp",
+  supplyChainSupport: "/images/services/13TOpGke15uAtcMc0ST9pwPcGME.png",
+};
