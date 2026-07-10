@@ -41,7 +41,7 @@ const aqua: [string, string] = ["#1E9AD6", "#0A1E3F"];
 
 export const media = {
   heroBackdrop: {
-    photo: "/images/58z3TYyfnXyMf2UTH7kLDDAXE.png",
+    photo: "/images/cturv8vAsPXN8sBjpgRFPRIP04.png",
     scene: "port",
     alt: "Aerial view of a container port with stacked shipping containers",
     tint: navy,
@@ -55,28 +55,28 @@ export const media = {
   },
 
   approach: {
-    photo: "/images/ocgvQuoK3due4ZyHBUQSlGhPrk.png",
+    photo: "/images/merchant exports.png",
     scene: "warehouse",
     alt: "Warehouse operations with organised racking and storage",
     tint: navy,
   },
 
   servicesBanner: {
-    photo: "/images/Q8HDI34gedLZFJEDYKKsmLXkmE0.png",
+    photo: "/images/fXpGEgk8MYDDSOptuGC5udomCZg.png",
     scene: "cargoShip",
     alt: "Ocean freight cargo vessel loaded with containers at sea",
     tint: navy,
   },
 
   whyBanner: {
-    photo: "/images/VhjHnbXzrKYPLfpT2qSHSkvk2E.png",
+    photo: "/images/njp1bA3BMvVgEmIAjrqQvHgkG5g.png",
     scene: "meeting",
     alt: "Business partners shaking hands over a successful trade agreement",
     tint: navyDeep,
   },
 
   contactBanner: {
-    photo: "/images/13TOpGke15uAtcMc0ST9pwPcGME.png",
+    photo: "/images/yIy6phoiIf84zwFx7NRHBVvztRo.png",
     scene: "airFreight",
     alt: "Air freight cargo aircraft being loaded for international shipment",
     tint: aqua,
@@ -95,11 +95,11 @@ export const productScene: Record<string, Scene> = {
 };
 
 export const productImages: Record<string, string> = {
-  "Diabetic Rice": "/images/4acSgTNQtDhKJc5HY3RbnF1XjU.png",
-  Rice: "/images/qwyQeyfBGJi9aww8ZkveTOM5ac.png",
-  Spices: "/images/mcTGJpDwOPGjIxn5YL2qudA4.png",
-  "Agricultural Products": "/images/tG09x9l5VdzTpukbWPZW2Vqz4U.png",
-  "Essential Oils": "/images/tiQLZcLU2erUzVjHNmUIdT7w.png",
-  "Medical Equipment": "/images/13TOpGke15uAtcMc0ST9pwPcGME.png",
-  "Textiles & Apparel": "/images/VhjHnbXzrKYPLfpT2qSHSkvk2E.png",
+  "Diabetic Rice": "/images/Diabetic Rice.png",
+  Rice: "/images/rice.png",
+  Spices: "/images/qwyQeyfBGJi9aww8ZkveTOM5ac.png",
+  "Agricultural Products": "/images/RCaxzJxVFjyHNi5dujROzvvcI0g.png",
+  "Essential Oils": "/images/essential oils.png",
+  "Medical Equipment": "/images/Medical Equipments.png",
+  "Textiles & Apparel": "/images/1Ar6vWvPCx1oFUSDbjqBbFe27I.png",
 };
