@@ -31,6 +31,7 @@ export const site = {
     line2: "Sunday: Closed",
   },
   socials: {
+    facebook: "https://facebook.com/VRDAPrime",
     x: "https://x.com/vrdaprime",
     linkedin: "https://www.linkedin.com/in/vrda",
     instagram: "https://www.instagram.com/vrdaprime",
